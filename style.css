@@ -1,0 +1,361 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f8f8; /* Light background */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.logo-name {
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: 80px; /* Adjust for fixed navbar */
+}
+
+.left-panel {
+    flex: 0 0 35%; /* Adjust width as needed */
+    background-color: #e8dccf; /* Light brown/beige color */
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Profile Card */
+.profile-card-container {
+    position: absolute; /* Position relative to .left-panel */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the card */
+    z-index: 2; /* Ensure it's above the left panel */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.profile-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    width: 280px; /* Fixed width for the card */
+    box-sizing: border-box;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #f0f0f0; /* Light border for the image */
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profile-title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Main Content Area */
+.main-content {
+    max-width: 550px; /* Adjust width of text content */
+    padding-left: 200px; /* Space for the profile card overlap */
+}
+
+.hello-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px; /* Large "Hello" */
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.buttons {
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.btn-secondary:hover {
+    background-color: #e6f2ff;
+}
+
+.main-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f0f0f0; /* Light grey footer */
+    font-size: 13px;
+    color: #666;
+    border-top: 1px solid #eee;
+}
+
+.footer-left a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.footer-contact p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-social p {
+    margin: 0;
+}
+
+.footer-social a {
+    color: #666;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #007bff;
+}
+
+/* Responsive adjustments (optional, but good practice) */
+@media (max-width: 1024px) {
+    .left-panel {
+        flex: 0 0 30%;
+    }
+    .profile-card-container {
+        left: 55%;
+    }
+    .main-content {
+        padding-left: 150px;
+        max-width: 500px;
+    }
+    .hello-heading {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+        position: relative; /* Make navbar not fixed on smaller screens */
+        box-shadow: none;
+    }
+    .nav-links {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .nav-links a {
+        margin: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-top: 0; /* No need for margin-top if navbar isn't fixed */
+    }
+    .left-panel {
+        width: 100%;
+        min-height: 300px; /* Ensure some height */
+        display: flex; /* Use flex to center the card within it */
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Change to relative for better mobile positioning */
+        padding: 50px 20px 180px; /* Add bottom padding for card overlap */
+    }
+    .profile-card-container {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: -150px; /* Pull it up to overlap */
+        width: 80%; /* Make card responsive */
+        max-width: 300px;
+    }
+    .profile-card {
+        width: 100%; /* Make card content fill its container */
+    }
+
+    .content-area {
+        padding: 100px 20px 20px; /* Add top padding to avoid overlap with card */
+        text-align: center;
+    }
+    .main-content {
+        padding-left: 0;
+        max-width: 100%;
+    }
+    .hello-heading {
+        font-size: 50px;
+    }
+    .subtitle {
+        font-size: 18px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .btn {
+        width: 150px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .footer-right {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 20px;
+    }
+    .profile-name {
+        font-size: 20px;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    .hello-heading {
+        font-size: 40px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+}
